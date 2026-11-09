@@ -7,6 +7,9 @@ import { processImage } from "@/lib/image/process";
 import ScanAnimation from "@/components/scan/ScanAnimation";
 import { getSessionId } from "@/lib/session/store";
 import { storageSet } from "@/lib/storage";
+import { toTeaser, type FullAnalysis } from "@/lib/report/types";
+
+const ANALYSIS_BACKEND = "https://fal-proxy-nine.vercel.app/api/fizyonomi";
 
 type ScanState = "idle" | "scanning" | "error";
 
@@ -23,34 +26,12 @@ export default function ScanPage() {
 
   const [state, setState] = useState<ScanState>("idle");
   const [imageUrl, setImageUrl] = useState<string | null>(null);
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const analysisDone = useRef(false);
   const analysisResult = useRef<unknown>(null);
 
-  const handleFileSelect = useCallback(async (file: File) => {
-    if (!file.type.startsWith("image/")) return;
-
-    setError(null);
-
-    try {
-      const processed = await processImage(file);
-      const dataUrl = `data:image/jpeg;base64,${processed.base64}`;
-      const blob = await (await fetch(dataUrl)).blob();
-      const processedFile = new File([blob], "face.jpg", { type: "image/jpeg" });
-
-      const previewUrl = URL.createObjectURL(processedFile);
-      setImageUrl(previewUrl);
-      setImageFile(processedFile);
-
-      await startAnalysis(processedFile, previewUrl);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : ERROR_MESSAGES.default);
-    }
-  }, []);
-
-  const startAnalysis = useCallback(async (file: File, previewUrl: string) => {
+  const startAnalysis = useCallback(async (base64: string, previewUrl: string) => {
     setState("scanning");
     analysisDone.current = false;
     analysisResult.current = null;
@@ -62,28 +43,30 @@ export default function ScanPage() {
       return;
     }
 
-    const form = new FormData();
-    form.append("image", file);
-    form.append("sessionId", sessionId);
-    form.append("locale", locale);
-
     try {
-      const res = await fetch("/api/analyze", {
+      const res = await fetch(ANALYSIS_BACKEND, {
         method: "POST",
-        body: form,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          feature: "single",
+          image: base64,
+          mime: "image/jpeg",
+          lang: locale === "tr" ? "tr" : "en",
+          tone: "samimi",
+        }),
       });
 
-      const data = await res.json();
+      const data = await res.json() as FullAnalysis;
 
-      if (!res.ok) {
-        const status = res.headers.get("X-Analysis-Status");
-        const msg = ERROR_MESSAGES[status ?? ""] ?? data.error ?? ERROR_MESSAGES.default;
+      if (!res.ok || data.status !== "ok") {
+        const msg = ERROR_MESSAGES[data.status ?? ""] ?? data.message ?? ERROR_MESSAGES.default;
         analysisDone.current = true;
         analysisResult.current = { error: msg };
       } else {
+        const teaser = toTeaser(data);
         analysisDone.current = true;
-        analysisResult.current = data;
-        storageSet("sima_teaser", JSON.stringify(data.teaser));
+        analysisResult.current = { teaser };
+        storageSet("sima_teaser", JSON.stringify(teaser));
         storageSet("sima_image_url", previewUrl);
       }
     } catch {
@@ -91,6 +74,22 @@ export default function ScanPage() {
       analysisResult.current = { error: ERROR_MESSAGES.default };
     }
   }, [locale]);
+
+  const handleFileSelect = useCallback(async (file: File) => {
+    if (!file.type.startsWith("image/")) return;
+
+    setError(null);
+
+    try {
+      const processed = await processImage(file);
+      const dataUrl = `data:image/jpeg;base64,${processed.base64}`;
+      setImageUrl(dataUrl);
+
+      await startAnalysis(processed.base64, dataUrl);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : ERROR_MESSAGES.default);
+    }
+  }, [startAnalysis]);
 
   const handleScanComplete = useCallback(() => {
     if (!analysisDone.current) {
