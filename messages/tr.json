@@ -1,0 +1,114 @@
+{
+  "common": {
+    "back": "Geri",
+    "continue": "Devam Et",
+    "skip": "Geç",
+    "loading": "Yükleniyor…",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar Dene",
+    "disclaimer": "Eğlence amaçlıdır · Bilimsel geçerliliği yoktur",
+    "privacyBadge": "Fotoğrafın analizden sonra silinir",
+    "brand": "Simaloji"
+  },
+  "prelanding": {
+    "character": {
+      "headline": "Yüzün kişiliğin hakkında ne anlatıyor?",
+      "sub": "14 bölge analizi ile karakterini, mizacını ve güçlü yönlerini keşfet.",
+      "cta": "Analize Başla",
+      "trust": "2 dakika · Ücretsiz önizleme"
+    },
+    "love": {
+      "headline": "Yüz uyumunuzu keşfedin",
+      "sub": "Partnerinle ne kadar uyumlusunuz? Yüz analizi sırrı ortaya çıkarıyor.",
+      "cta": "Uyumu Keşfet",
+      "trust": "2 dakika · Ücretsiz önizleme"
+    },
+    "career": {
+      "headline": "Yüzün kariyer yolunu ele veriyor",
+      "sub": "Alın, çene ve göz yapısı çalışma tarzın hakkında ipuçları taşıyor.",
+      "cta": "Kariyer Analizine Başla",
+      "trust": "2 dakika · Ücretsiz önizleme"
+    },
+    "tracking": {
+      "headline": "Yüzünün değişimini takip et",
+      "sub": "Zaman içinde nasıl değiştiğini gör. 14 bölge, günlük takip.",
+      "cta": "Takibe Başla",
+      "trust": "2 dakika · Ücretsiz önizleme"
+    }
+  },
+  "quiz": {
+    "multipleSelect": "Birden fazla seçebilirsin",
+    "infoNext": "Anladım, Devam",
+    "stepOf": "{current} / {total}"
+  },
+  "scan": {
+    "title": "Yüzünü Çerçevele",
+    "instruction": "Yüzünü oval çerçeveye hizala",
+    "hint1": "Daha aydınlık bir yere geç",
+    "hint2": "Başını düz tut",
+    "hint3": "Gözlüğünü çıkarabilirsin",
+    "cta": "Selfie Çek",
+    "gallery": "Galeriden Seç",
+    "consent": "Fotoğrafın yalnızca analiz için kullanılır ve analiz biter bitmez silinir.",
+    "consentLink": "Gizlilik Politikası",
+    "scanning": "Yüz taranıyor…",
+    "errorNoFace": "Net bir yüz fotoğrafı gönderin.",
+    "errorMinor": "Bu analiz 18 yaş ve üzeri içindir.",
+    "errorGeneric": "Fotoğraf işlenemedi. Tekrar deneyin.",
+    "retake": "Yeniden Çek"
+  },
+  "processing": {
+    "title": "Raporun Hazırlanıyor",
+    "step0": "Yüz taranıyor",
+    "step1": "14 bölge analizi",
+    "step2": "Mizaç profili",
+    "step3": "Güçlü yönler",
+    "step4": "İçgörü hazırlanıyor"
+  },
+  "email": {
+    "title": "Raporun hazır! Kaybolmaması için nereye gönderelim?",
+    "sub": "Raporuna istediğin zaman bu e-postayla ulaşabilirsin.",
+    "placeholder": "e-posta@adresin.com",
+    "cta": "Raporumu Gönder",
+    "skip": "Şimdi değil",
+    "marketing": "Yeni özellikler ve içeriklerden haberdar olmak istiyorum (isteğe bağlı)",
+    "errorFormat": "Geçerli bir e-posta adresi gir.",
+    "errorTypo": "Bunu mu yazmak istedin: {suggestion}?"
+  },
+  "result": {
+    "analysisBadge": "Analiz Tamamlandı",
+    "faceType": "Yüz Tipin",
+    "openSection": "Alın Analizi",
+    "lockedSection": "Kilitli",
+    "lockedHint": "Tam raporu görmek için devam et",
+    "cta": "Tam Raporumu Aç",
+    "disclaimer": "Simaloji eğlence ve keşif amaçlıdır; bilimsel veya psikolojik değerlendirme değildir."
+  },
+  "paywall": {
+    "title": "Kişisel yüz analizi raporun hazır",
+    "timerLabel": "Bu fiyat sona eriyor:",
+    "popularBadge": "En Popüler",
+    "ctaMain": "Raporumu Al",
+    "renewalNote": "Deneme bitmeden 24 saat önce hatırlatma göndereceğiz.",
+    "features": {
+      "title": "Neler Dahil",
+      "regions": "14 bölgenin tamamı — alın, gözler, çene ve daha fazlası",
+      "temperament": "Mizaç profili ve güçlü yönler",
+      "career": "Kariyer eğilimleri ve uygun roller",
+      "growth": "Gelişim alanları ve öneriler",
+      "lifestyle": "Yaşam tarzı ve sosyal profil",
+      "app": "Uygulamada premium (günlük takip, karşılaştırma)"
+    },
+    "guarantee": "7 gün içinde memnun kalmazsan iade ediyoruz.",
+    "exitTitle": "Bekle! Sana özel bir teklifimiz var",
+    "exitCta": "İndirimli Teklifi Gör"
+  },
+  "welcome": {
+    "title": "Hoş Geldin!",
+    "sub": "Raporun hazır. Şimdi ne yapmak istersin?",
+    "webCta": "Tam Raporumu Web'de Oku",
+    "appCta": "Uygulamayı İndir",
+    "appNote": "Uygulamada aynı e-postayla giriş yap, premium otomatik açılır.",
+    "emailSent": "Giriş linki e-postana gönderildi."
+  }
+}

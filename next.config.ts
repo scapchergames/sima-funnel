@@ -1,17 +1,12 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./lib/i18n.ts");
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
+  ...(process.env.NODE_ENV === "development" && {
+    allowedDevOrigins: ["192.168.1.165"],
+  }),
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

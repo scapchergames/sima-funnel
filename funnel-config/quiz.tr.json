@@ -1,0 +1,256 @@
+{
+  "steps": [
+    {
+      "id": "gender",
+      "type": "single_choice",
+      "titleKey": "Cinsiyetini seç",
+      "options": [
+        { "id": "female", "labelKey": "Kadın", "icon": "♀", "traits": { "feminine": 1 } },
+        { "id": "male",   "labelKey": "Erkek", "icon": "♂", "traits": { "masculine": 1 } },
+        { "id": "other",  "labelKey": "Belirtmek istemiyorum", "icon": "◇", "traits": {} }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_gender"
+    },
+    {
+      "id": "age",
+      "type": "single_choice",
+      "titleKey": "Yaş aralığın nedir?",
+      "options": [
+        { "id": "under18", "labelKey": "18 yaş altı",  "icon": "🌱", "traits": {}, "exit": true },
+        { "id": "18-24",   "labelKey": "18 – 24",      "icon": "⚡", "traits": { "young": 1 } },
+        { "id": "25-34",   "labelKey": "25 – 34",      "icon": "🔥", "traits": {} },
+        { "id": "35-44",   "labelKey": "35 – 44",      "icon": "🌊", "traits": {} },
+        { "id": "45plus",  "labelKey": "45 ve üzeri",  "icon": "🌟", "traits": { "mature": 1 } }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_age"
+    },
+    {
+      "id": "goal",
+      "type": "single_choice",
+      "titleKey": "Seni buraya getiren ne?",
+      "options": [
+        { "id": "selfknowledge", "labelKey": "Kendimi daha iyi tanımak",    "icon": "🔍", "traits": { "introspective": 2 }, "highlight": "character" },
+        { "id": "relationships", "labelKey": "İlişkilerimi anlamak",        "icon": "💫", "traits": { "relational": 2 },    "highlight": "love" },
+        { "id": "career",        "labelKey": "Kariyer yolumu keşfetmek",    "icon": "🚀", "traits": { "ambitious": 2 },      "highlight": "career" },
+        { "id": "curiosity",     "labelKey": "Sadece merak ettim",          "icon": "✨", "traits": { "curious": 1 },        "highlight": "character" }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_goal"
+    },
+    {
+      "id": "peace_place",
+      "type": "image_choice",
+      "multiSelect": true,
+      "maxSelect": 2,
+      "titleKey": "En çok nerede huzur bulursunuz?",
+      "subtitleKey": "Uygun olanların hepsini seçin",
+      "options": [
+        {
+          "id": "forest",
+          "labelKey": "Ormanda",
+          "imageUrl": "https://images.unsplash.com/photo-1448375240359-a53d2d08a784?w=400&h=300&fit=crop&auto=format&q=75",
+          "traits": { "introvert": 1, "calm": 1, "mysterious": 1 }
+        },
+        {
+          "id": "water",
+          "labelKey": "Su kenarında",
+          "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop&auto=format&q=75",
+          "traits": { "calm": 2, "balanced": 1 }
+        },
+        {
+          "id": "field",
+          "labelKey": "Açık bir alanda",
+          "imageUrl": "https://images.unsplash.com/photo-1472214103451-aed0f346cc02?w=400&h=300&fit=crop&auto=format&q=75",
+          "traits": { "extrovert": 1, "energetic": 1, "ambitious": 1 }
+        },
+        {
+          "id": "cozy_room",
+          "labelKey": "Rahat bir odada",
+          "imageUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop&auto=format&q=75",
+          "traits": { "introvert": 2, "warm": 1 }
+        }
+      ],
+      "track": "quiz_peace_place"
+    },
+    {
+      "id": "relationship_status",
+      "type": "single_choice",
+      "titleKey": "İlişki durumun nedir?",
+      "options": [
+        { "id": "single",       "labelKey": "Bekarım",           "icon": "🌙", "traits": { "single": 1 } },
+        { "id": "relationship", "labelKey": "İlişkim var",       "icon": "❤️", "traits": { "relational": 1 } },
+        { "id": "complicated",  "labelKey": "Karmaşık",          "icon": "🌀", "traits": {} },
+        { "id": "prefer_not",   "labelKey": "Belirtmek istemiyorum", "icon": "◇", "traits": {} }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_relationship"
+    },
+    {
+      "id": "social_style",
+      "type": "single_choice",
+      "titleKey": "Kalabalık bir ortamda genelde…",
+      "options": [
+        { "id": "energized",    "labelKey": "Enerjilenirim, insanlarla tanışmak isterim", "icon": "🌞", "traits": { "extrovert": 2 } },
+        { "id": "selective",    "labelKey": "Seçici davranırım, birkaç kişiyle derin konuşmayı tercih ederim", "icon": "🎯", "traits": { "ambivert": 1 } },
+        { "id": "drained",      "labelKey": "Enerjim düşer, en kısa sürede çıkmak isterim", "icon": "🌙", "traits": { "introvert": 2 } }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_social"
+    },
+    {
+      "id": "decision_style",
+      "type": "single_choice",
+      "titleKey": "Karar verirken daha çok…",
+      "options": [
+        { "id": "logic",     "labelKey": "Mantığa ve verilere güvenirim",  "icon": "🧠", "traits": { "analytical": 2 } },
+        { "id": "intuition", "labelKey": "İçgüdülerime ve hislerime güvenirim", "icon": "⚡", "traits": { "intuitive": 2 } },
+        { "id": "both",      "labelKey": "İkisini de dengelerim",           "icon": "⚖️", "traits": { "balanced": 1 } }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_decision"
+    },
+    {
+      "id": "first_impression",
+      "type": "multi_choice",
+      "titleKey": "İnsanlar seni ilk görüşte nasıl tanımlar?",
+      "maxSelect": 3,
+      "options": [
+        { "id": "warm",        "labelKey": "Sıcak ve samimi",         "icon": "☀️", "traits": { "warm": 2 } },
+        { "id": "mysterious",  "labelKey": "Gizemli ve derin",        "icon": "🌑", "traits": { "mysterious": 2 } },
+        { "id": "confident",   "labelKey": "Güçlü ve güvenli",        "icon": "🦁", "traits": { "confident": 2 } },
+        { "id": "calm",        "labelKey": "Sakin ve dinlendirici",   "icon": "🌊", "traits": { "calm": 2 } },
+        { "id": "energetic",   "labelKey": "Enerjik ve dinamik",      "icon": "⚡", "traits": { "energetic": 2 } }
+      ],
+      "autoAdvance": false,
+      "track": "quiz_first_impression"
+    },
+    {
+      "id": "mood_nature",
+      "type": "image_choice",
+      "multiSelect": false,
+      "titleKey": "Ruh halinizi en iyi hangisi yansıtır?",
+      "subtitleKey": "En yakın hissettiğinizi seçin",
+      "options": [
+        {
+          "id": "sunrise",
+          "labelKey": "Güneş gibi parlak",
+          "imageUrl": "https://images.unsplash.com/photo-1476514525405-345571af4f83?w=400&h=300&fit=crop&auto=format&q=75",
+          "traits": { "energetic": 2, "extrovert": 1, "warm": 1 }
+        },
+        {
+          "id": "mountain",
+          "labelKey": "Dağ gibi sağlam",
+          "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&h=300&fit=crop&auto=format&q=75",
+          "traits": { "confident": 2, "analytical": 1, "leader": 1 }
+        },
+        {
+          "id": "night",
+          "labelKey": "Gece gibi derin",
+          "imageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=300&fit=crop&auto=format&q=75",
+          "traits": { "mysterious": 2, "introvert": 1, "intuitive": 1 }
+        },
+        {
+          "id": "autumn",
+          "labelKey": "Sonbahar gibi sıcak",
+          "imageUrl": "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=400&h=300&fit=crop&auto=format&q=75",
+          "traits": { "warm": 2, "empathetic": 1, "relational": 1 }
+        }
+      ],
+      "track": "quiz_mood_nature"
+    },
+    {
+      "id": "info_tradition",
+      "type": "info",
+      "titleKey": "Marifetname'den Yapay Zekaya: 267 Yıllık Hikmet",
+      "bodyKey": "İbrahim Hakkı Hazretleri, 1757'de kaleme aldığı Marifetname'de yüzün her bölgesini insanın iç dünyasının aynası olarak yorumlar. Alın, göz, burun, çene... Her çizgi bir karakter okuyuşu. Simaloji, bu köklü ilm-i kıyafet geleneğini modern yapay zeka ile buluşturuyor.",
+      "illustration": "face_map",
+      "stat": "14",
+      "statLabel": "bölge · Marifetname'den ilham",
+      "track": "quiz_info_tradition"
+    },
+    {
+      "id": "stress_response",
+      "type": "single_choice",
+      "titleKey": "Stresle başa çıkma tarzın nedir?",
+      "options": [
+        { "id": "action",    "labelKey": "Harekete geçerim, bir şeyler yaparım",   "icon": "⚡", "traits": { "active": 2 } },
+        { "id": "withdraw",  "labelKey": "İçime kapanır, yalnız olmak isterim",    "icon": "🌙", "traits": { "introvert": 1 } },
+        { "id": "talk",      "labelKey": "Konuşurum, destek ararım",               "icon": "💬", "traits": { "relational": 1 } },
+        { "id": "distract",  "labelKey": "Dikkatimi dağıtır, kaçarım",             "icon": "🎮", "traits": { "avoidant": 1 } }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_stress"
+    },
+    {
+      "id": "strength",
+      "type": "single_choice",
+      "titleKey": "En güçlü yönün sence ne?",
+      "options": [
+        { "id": "empathy",    "labelKey": "Empati — insanları iyi anlarım",        "icon": "❤️", "traits": { "empathetic": 2 } },
+        { "id": "analysis",   "labelKey": "Analiz — durumları derin düşünürüm",    "icon": "🔬", "traits": { "analytical": 1 } },
+        { "id": "leadership", "labelKey": "Liderlik — insanları motive ederim",    "icon": "🦁", "traits": { "leader": 2 } },
+        { "id": "creativity", "labelKey": "Yaratıcılık — yeni fikirler üretirim",  "icon": "✨", "traits": { "creative": 2 } }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_strength"
+    },
+    {
+      "id": "growth_area",
+      "type": "single_choice",
+      "titleKey": "En çok geliştirmek istediğin alan?",
+      "options": [
+        { "id": "confidence",   "labelKey": "Özgüven",             "icon": "🦁", "traits": { "needsConfidence": 2 } },
+        { "id": "relationships","labelKey": "İlişkiler",            "icon": "💫", "traits": { "needsRelations": 2 } },
+        { "id": "career",       "labelKey": "Kariyer ve başarı",   "icon": "🚀", "traits": { "needsCareer": 2 } },
+        { "id": "balance",      "labelKey": "İç huzur ve denge",   "icon": "⚖️", "traits": { "needsBalance": 2 } }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_growth"
+    },
+    {
+      "id": "info_social_proof",
+      "type": "info",
+      "titleKey": "Binlerce kişi deneyimi paylaştı",
+      "bodyKey": "Simaloji kullanıcıları analizlerini genellikle 'şaşırtıcı derecede isabetli' olarak tanımlıyor. Yüzünde ne göreceğini merak ediyor musun?",
+      "stat": "50.000+",
+      "statLabel": "analiz tamamlandı",
+      "track": "quiz_info_social"
+    },
+    {
+      "id": "notable_feature",
+      "type": "single_choice",
+      "titleKey": "Kendi yüzünde en çok dikkat çektiğini düşündüğün bölge hangisi?",
+      "options": [
+        { "id": "eyes",    "labelKey": "Gözlerim",     "icon": "👁️", "traits": { "eyesFocus": 1 } },
+        { "id": "jaw",     "labelKey": "Çenem",        "icon": "🔷", "traits": { "jawFocus": 1 } },
+        { "id": "forehead","labelKey": "Alnim",        "icon": "🔆", "traits": { "foreheadFocus": 1 } },
+        { "id": "lips",    "labelKey": "Dudaklarım",   "icon": "💋", "traits": { "lipsFocus": 1 } },
+        { "id": "nose",    "labelKey": "Burnum",       "icon": "▽",  "traits": { "noseFocus": 1 } }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_notable_feature"
+    },
+    {
+      "id": "tracking_interest",
+      "type": "single_choice",
+      "titleKey": "Yüzünün zaman içindeki değişimini takip etmek ister misin?",
+      "options": [
+        { "id": "yes",    "labelKey": "Evet, harika olur!", "icon": "✅", "traits": { "appInterest": 2 } },
+        { "id": "maybe",  "labelKey": "Belki ileride",      "icon": "⏰", "traits": { "appInterest": 1 } },
+        { "id": "no",     "labelKey": "Şimdilik hayır",     "icon": "◇", "traits": {} }
+      ],
+      "autoAdvance": true,
+      "track": "quiz_tracking"
+    },
+    {
+      "id": "transition",
+      "type": "transition",
+      "titleKey": "Kişisel profilin oluşturuluyor",
+      "bodyKey": "Harika! Cevapların kaydedildi. Şimdi yüzünü analiz edelim.",
+      "ctaKey": "Yüzümü Analiz Et",
+      "track": "quiz_transition"
+    }
+  ]
+}

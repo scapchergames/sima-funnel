@@ -1,0 +1,114 @@
+{
+  "common": {
+    "back": "Back",
+    "continue": "Continue",
+    "skip": "Skip",
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "disclaimer": "For entertainment only · Not scientifically validated",
+    "privacyBadge": "Your photo is deleted after analysis",
+    "brand": "Simaloji"
+  },
+  "prelanding": {
+    "character": {
+      "headline": "What does your face reveal about you?",
+      "sub": "Discover your character, temperament and strengths with a 14-region face analysis.",
+      "cta": "Start Analysis",
+      "trust": "2 minutes · Free preview"
+    },
+    "love": {
+      "headline": "Discover your facial compatibility",
+      "sub": "How compatible are you with your partner? Face analysis reveals the secret.",
+      "cta": "Discover Compatibility",
+      "trust": "2 minutes · Free preview"
+    },
+    "career": {
+      "headline": "Your face reveals your career path",
+      "sub": "Forehead, jaw and eye structure carry clues about your work style.",
+      "cta": "Start Career Analysis",
+      "trust": "2 minutes · Free preview"
+    },
+    "tracking": {
+      "headline": "Track your face over time",
+      "sub": "See how you change over time. 14 regions, daily tracking.",
+      "cta": "Start Tracking",
+      "trust": "2 minutes · Free preview"
+    }
+  },
+  "quiz": {
+    "multipleSelect": "You can select multiple",
+    "infoNext": "Got it, Continue",
+    "stepOf": "{current} / {total}"
+  },
+  "scan": {
+    "title": "Frame Your Face",
+    "instruction": "Align your face with the oval frame",
+    "hint1": "Move to a brighter spot",
+    "hint2": "Keep your head straight",
+    "hint3": "You can remove your glasses",
+    "cta": "Take Selfie",
+    "gallery": "Choose from Gallery",
+    "consent": "Your photo is used only for analysis and deleted immediately after.",
+    "consentLink": "Privacy Policy",
+    "scanning": "Scanning face…",
+    "errorNoFace": "Please send a clear face photo.",
+    "errorMinor": "This analysis is for ages 18 and over.",
+    "errorGeneric": "Could not process photo. Please try again.",
+    "retake": "Retake"
+  },
+  "processing": {
+    "title": "Preparing Your Report",
+    "step0": "Scanning face",
+    "step1": "14 region analysis",
+    "step2": "Temperament profile",
+    "step3": "Strengths",
+    "step4": "Preparing insights"
+  },
+  "email": {
+    "title": "Your report is ready! Where should we send it so it doesn't get lost?",
+    "sub": "You can access your report anytime with this email.",
+    "placeholder": "your@email.com",
+    "cta": "Send My Report",
+    "skip": "Not now",
+    "marketing": "I want to hear about new features and content (optional)",
+    "errorFormat": "Enter a valid email address.",
+    "errorTypo": "Did you mean: {suggestion}?"
+  },
+  "result": {
+    "analysisBadge": "Analysis Complete",
+    "faceType": "Your Face Type",
+    "openSection": "Forehead Analysis",
+    "lockedSection": "Locked",
+    "lockedHint": "Continue to see the full report",
+    "cta": "Unlock My Full Report",
+    "disclaimer": "Simaloji is for entertainment and exploration; not a scientific or psychological evaluation."
+  },
+  "paywall": {
+    "title": "Your personal face analysis report is ready",
+    "timerLabel": "This price expires in:",
+    "popularBadge": "Most Popular",
+    "ctaMain": "Get My Report",
+    "renewalNote": "We'll remind you 24 hours before your trial ends.",
+    "features": {
+      "title": "What's Included",
+      "regions": "All 14 regions — forehead, eyes, jaw and more",
+      "temperament": "Temperament profile and strengths",
+      "career": "Career tendencies and suitable roles",
+      "growth": "Growth areas and recommendations",
+      "lifestyle": "Lifestyle and social profile",
+      "app": "App premium (daily tracking, comparison)"
+    },
+    "guarantee": "Not satisfied within 7 days? We'll refund you.",
+    "exitTitle": "Wait! We have a special offer for you",
+    "exitCta": "See Discounted Offer"
+  },
+  "welcome": {
+    "title": "Welcome!",
+    "sub": "Your report is ready. What would you like to do?",
+    "webCta": "Read My Full Report Online",
+    "appCta": "Download the App",
+    "appNote": "Sign in with the same email in the app — premium unlocks automatically.",
+    "emailSent": "Login link sent to your email."
+  }
+}

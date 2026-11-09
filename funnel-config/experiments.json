@@ -1,0 +1,32 @@
+{
+  "experiments": [
+    {
+      "id": "quiz_length",
+      "description": "Quiz adım sayısı testi",
+      "variants": [
+        { "id": "short",  "weight": 33, "config": { "maxSteps": 8 } },
+        { "id": "medium", "weight": 34, "config": { "maxSteps": 12 } },
+        { "id": "long",   "weight": 33, "config": { "maxSteps": 15 } }
+      ],
+      "active": false
+    },
+    {
+      "id": "pricing_model",
+      "description": "Fiyat modeli testi",
+      "variants": [
+        { "id": "trial_low",  "weight": 50, "config": { "defaultPlan": "trial_weekly" } },
+        { "id": "monthly",    "weight": 50, "config": { "defaultPlan": "monthly" } }
+      ],
+      "active": false
+    },
+    {
+      "id": "email_placement",
+      "description": "E-posta adımının yeri",
+      "variants": [
+        { "id": "after_scan",    "weight": 50, "config": { "emailStep": "after_scan" } },
+        { "id": "after_teaser",  "weight": 50, "config": { "emailStep": "after_teaser" } }
+      ],
+      "active": false
+    }
+  ]
+}

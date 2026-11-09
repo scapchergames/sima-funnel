@@ -1,0 +1,130 @@
+{
+  "tr": {
+    "currency": "TRY",
+    "currencySymbol": "₺",
+    "plans": [
+      {
+        "id": "trial_weekly",
+        "name": "7 Günlük Deneme",
+        "trialDays": 7,
+        "trialPrice": 39.99,
+        "renewalPrice": 349.99,
+        "renewalPeriod": "4 haftada bir",
+        "renewalPeriodDays": 28,
+        "popular": false,
+        "cta": "7 Gün Dene"
+      },
+      {
+        "id": "monthly",
+        "name": "Aylık",
+        "trialDays": 0,
+        "trialPrice": null,
+        "renewalPrice": 199.99,
+        "renewalPeriod": "aylık",
+        "renewalPeriodDays": 30,
+        "popular": true,
+        "cta": "Aylık Başla"
+      },
+      {
+        "id": "yearly",
+        "name": "Yıllık",
+        "trialDays": 0,
+        "trialPrice": null,
+        "renewalPrice": 1499.99,
+        "renewalPeriod": "yıllık",
+        "renewalPeriodDays": 365,
+        "popular": false,
+        "cta": "Yıllık Başla",
+        "savingsLabel": "Aylık ₺125 — %37 tasarruf"
+      }
+    ],
+    "upsells": [
+      {
+        "id": "compatibility_report",
+        "name": "İkili Uyum Raporu",
+        "description": "Partner veya arkadaşınla yüz uyumunu analiz et",
+        "price": 79.99,
+        "type": "one_time"
+      },
+      {
+        "id": "pdf_report",
+        "name": "Detaylı PDF Rapor",
+        "description": "İndirilebilir, paylaşılabilir şık rapor",
+        "price": 49.99,
+        "type": "one_time"
+      }
+    ],
+    "exitOffer": {
+      "planId": "trial_weekly",
+      "discountPercent": 50,
+      "discountedTrialPrice": 19.99,
+      "validMinutes": 15
+    },
+    "legalText": "\"Raporumu Al\" butonuna tıklayarak, 7 günlük deneme için bugün {trialPrice} ödemeyi ve deneme sonunda iptal etmezsen aboneliğinin {renewalPeriod} {renewalPrice} (KDV dahil) olarak otomatik yenilenmesini kabul edersin. Deneme bitmeden önce sana hatırlatma e-postası göndereceğiz. Banka ekstrende SIMAFZM.COM olarak görünür.",
+    "statementDescriptor": "SIMAFZM.COM"
+  },
+  "en": {
+    "currency": "USD",
+    "currencySymbol": "$",
+    "plans": [
+      {
+        "id": "trial_weekly",
+        "name": "7-Day Trial",
+        "trialDays": 7,
+        "trialPrice": 0.99,
+        "renewalPrice": 19.99,
+        "renewalPeriod": "every 4 weeks",
+        "renewalPeriodDays": 28,
+        "popular": false,
+        "cta": "Try 7 Days"
+      },
+      {
+        "id": "monthly",
+        "name": "Monthly",
+        "trialDays": 0,
+        "trialPrice": null,
+        "renewalPrice": 9.99,
+        "renewalPeriod": "monthly",
+        "renewalPeriodDays": 30,
+        "popular": true,
+        "cta": "Start Monthly"
+      },
+      {
+        "id": "yearly",
+        "name": "Yearly",
+        "trialDays": 0,
+        "trialPrice": null,
+        "renewalPrice": 49.99,
+        "renewalPeriod": "yearly",
+        "renewalPeriodDays": 365,
+        "popular": false,
+        "cta": "Start Yearly",
+        "savingsLabel": "$4.17/mo — Save 58%"
+      }
+    ],
+    "upsells": [
+      {
+        "id": "compatibility_report",
+        "name": "Compatibility Report",
+        "description": "Analyze face compatibility with a partner or friend",
+        "price": 4.99,
+        "type": "one_time"
+      },
+      {
+        "id": "pdf_report",
+        "name": "Detailed PDF Report",
+        "description": "Downloadable, shareable premium report",
+        "price": 2.99,
+        "type": "one_time"
+      }
+    ],
+    "exitOffer": {
+      "planId": "trial_weekly",
+      "discountPercent": 50,
+      "discountedTrialPrice": 0.49,
+      "validMinutes": 15
+    },
+    "legalText": "By tapping \"Get My Report\" you agree to pay {trialPrice} today for a 7-day trial and to have your subscription automatically renew at {renewalPrice} {renewalPeriod} (incl. tax) unless you cancel before the trial ends. We'll remind you 24 hours before your trial ends. Charge will appear as SIMAFZM.COM on your statement.",
+    "statementDescriptor": "SIMAFZM.COM"
+  }
+}
