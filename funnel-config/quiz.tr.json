@@ -50,25 +50,25 @@
         {
           "id": "forest",
           "labelKey": "Ormanda",
-          "imageUrl": "https://images.unsplash.com/photo-1448375240359-a53d2d08a784?w=400&h=300&fit=crop&auto=format&q=75",
+          "imageUrl": "/quiz/forest.jpg",
           "traits": { "introvert": 1, "calm": 1, "mysterious": 1 }
         },
         {
           "id": "water",
           "labelKey": "Su kenarında",
-          "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop&auto=format&q=75",
+          "imageUrl": "/quiz/water.jpg",
           "traits": { "calm": 2, "balanced": 1 }
         },
         {
           "id": "field",
           "labelKey": "Açık bir alanda",
-          "imageUrl": "https://images.unsplash.com/photo-1472214103451-aed0f346cc02?w=400&h=300&fit=crop&auto=format&q=75",
+          "imageUrl": "/quiz/field.jpg",
           "traits": { "extrovert": 1, "energetic": 1, "ambitious": 1 }
         },
         {
           "id": "cozy_room",
           "labelKey": "Rahat bir odada",
-          "imageUrl": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop&auto=format&q=75",
+          "imageUrl": "/quiz/cozy_room.jpg",
           "traits": { "introvert": 2, "warm": 1 }
         }
       ],
@@ -136,25 +136,25 @@
         {
           "id": "sunrise",
           "labelKey": "Güneş gibi parlak",
-          "imageUrl": "https://images.unsplash.com/photo-1476514525405-345571af4f83?w=400&h=300&fit=crop&auto=format&q=75",
+          "imageUrl": "/quiz/sunrise.jpg",
           "traits": { "energetic": 2, "extrovert": 1, "warm": 1 }
         },
         {
           "id": "mountain",
           "labelKey": "Dağ gibi sağlam",
-          "imageUrl": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=400&h=300&fit=crop&auto=format&q=75",
+          "imageUrl": "/quiz/mountain.jpg",
           "traits": { "confident": 2, "analytical": 1, "leader": 1 }
         },
         {
           "id": "night",
           "labelKey": "Gece gibi derin",
-          "imageUrl": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=400&h=300&fit=crop&auto=format&q=75",
+          "imageUrl": "/quiz/night.jpg",
           "traits": { "mysterious": 2, "introvert": 1, "intuitive": 1 }
         },
         {
           "id": "autumn",
           "labelKey": "Sonbahar gibi sıcak",
-          "imageUrl": "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=400&h=300&fit=crop&auto=format&q=75",
+          "imageUrl": "/quiz/autumn.jpg",
           "traits": { "warm": 2, "empathetic": 1, "relational": 1 }
         }
       ],

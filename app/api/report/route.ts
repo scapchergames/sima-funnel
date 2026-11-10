@@ -9,19 +9,24 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "sessionId required" }, { status: 400 });
   }
 
-  const session = await getSession(sessionId);
-  if (!session) {
-    return NextResponse.json({ error: "session not found" }, { status: 404 });
-  }
+  try {
+    const session = await getSession(sessionId);
+    if (!session) {
+      return NextResponse.json({ error: "session not found" }, { status: 404 });
+    }
 
-  if (!session.paid) {
-    return NextResponse.json({ error: "payment required" }, { status: 402 });
-  }
+    if (!session.paid) {
+      return NextResponse.json({ error: "payment required" }, { status: 402 });
+    }
 
-  const analysis = await analysisCache.get(sessionId);
-  if (!analysis) {
-    return NextResponse.json({ error: "analysis not found" }, { status: 404 });
-  }
+    const analysis = await analysisCache.get(sessionId);
+    if (!analysis) {
+      return NextResponse.json({ error: "analysis not found" }, { status: 404 });
+    }
 
-  return NextResponse.json({ analysis });
+    return NextResponse.json({ analysis });
+  } catch (err) {
+    console.error("[report] GET error:", err);
+    return NextResponse.json({ error: "Sunucu hatası" }, { status: 500 });
+  }
 }

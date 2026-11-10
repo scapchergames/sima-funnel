@@ -68,6 +68,13 @@ export default function ScanPage() {
         analysisResult.current = { teaser };
         storageSet("sima_teaser", JSON.stringify(teaser));
         storageSet("sima_image_url", previewUrl);
+
+        // Persist full analysis to server cache so the report page can retrieve it
+        fetch("/api/analyze/save", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sessionId, analysis: data }),
+        }).catch(() => null);
       }
     } catch {
       analysisDone.current = true;
